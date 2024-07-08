@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca Nacional</title>
+    <link rel="stylesheet" href="estilos.css"> <!-- Enlaza tu archivo de estilos CSS -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Estilos del encabezado */
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo img {
+            max-width: 150px;
+            height: auto;
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .navbar ul li {
+            margin: 0 15px;
+        }
+
+        .navbar ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: color 0.3s;
+        }
+
+        .navbar ul li a:hover {
+            color: #ffd700;
+        }
+
+        /* Estilos de la imagen con texto superpuesto */
+        .hero-image {
+            position: relative;
+            text-align: center;
+            color: white;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .hero-text {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            border-radius: 8px;
+            font-size: 0.8em;
+        }
+
+        .hero-text h1 {
+            font-size: 1.5em;
+            margin-bottom: 0.3rem;
+        }
+
+        .hero-text p {
+            font-size: 0.8em;
+            margin: 0;
+        }
+
+        /* Estilos de las secciones */
+        main {
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .section {
+            padding: 4rem 2rem;
+            text-align: justify;
+        }
+
+        .section h2 {
+            font-size: 2.5em;
+            margin-bottom: 1.5rem;
+            color: #333;
+        }
+
+        .section p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+
+        .section img {
+            display: block;
+            margin: 0 auto; /* Centra la imagen horizontalmente */
+            width: 70%; /* Ajusta el ancho según tu diseño */
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
+
+        .section .image-container {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 2rem;
+        }
+
+        .section .image-container img {
+            width: calc(50% - 10px); /* Ajusta el tamaño según tu diseño */
+        }
+
+        /* Estilos del pie de página */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9em;
+        }
+
+        /* Estilos para el carrusel */
+        .carousel {
+            width: 60%;
+            margin: 0 auto;
+        }
+
+        .carousel img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <!-- Logo aquí -->
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#historia">Historia</a></li>
+                    <li><a href="#arquitectura">Arquitectura</a></li>
+                    <li><a href="#ubicacion">Ubicación</a></li>
+                    <li><a href="#imagenes360">Imágenes 360°</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="hero-image">
+        <img src="imagenes1/BIENAES EDIT.jpg" alt="Imagen de la Catedral" style="width: 1680px; height: 800px; border-radius: 8px;">
+        <div class="hero-text">
+            <h1>Biblioteca Nacional</h1>
+            <p>Sumergete más en su historia y conoce muchos datos importantes</p>
+        </div>
+    </div>
+
+    <main>
+        <section id="historia" class="section">
+            <h2>Historia</h2>
+            <p>La Biblioteca Nacional Salvadoreña fue fundada sin sede, únicamente con libros el 5 de julio de 1870, posteriormente el 3 de mayo de 2002 adoptó el nombre de Biblioteca Nacional Francisco Gavidia. Inicialmente la biblioteca formaría parte de El Palacio Nacional, sin embargo, bajo el gobierno del presidente Santiago González se donó a la Universidad de El Salvador y posteriormente bajo acuerdo Ejecutivo en 1887 el presidente Francisco Menéndez ordenó que se separara de la universidad. Finalmente se instaló en el antiguo edificio del Banco Hipotecario que se encontraba en al sur de la Plaza Gerardo Barrios desde el año 1994 hasta 2021.
+
+            </p>
+            <p>Una de las primeras colecciones que formaron parte de la Biblioteca Nacional fue la que pertenecía al cardenal Luigi Lambruschini quien fue secretario del Papa Gregorio XVI, con títulos en fránces, italiano y español antiguo. A su vez contaba con una Hemeroteca salvadoreña, una sala de braille, colecciones salvadoreñas e internacionales, entre otras; En el año 2021 se demolió la Biblioteca Nacional Francisco Gavidia y se construyó en su lugar la Biblioteca Nacional de El Salvador (BINAES) donada por la República Popular de China.</p>
+            
+            <div class="image-container">
+                <img src="imagenes1/Binaes de noche.jpg" alt="Historia de la Catedral" style="width: 500px; height: 600px; border-radius: 8px;">
+            </div>
+        </section>
+
+        <section id="arquitectura" class="section">
+            <h2>Arquitectura</h2>
+            <p>la Biblioteca Nacional de El Salvador, antes de ser renovada, es un edificio muy conocido en San Salvador. Fue diseñada por el arquitecto salvadoreño José María Durán y construida entre 1953 y 1957. Su diseño combina estilos antiguos y modernos, con columnas grandes y una entrada impresionante que recuerda a la arquitectura griega clásica;
+
+                por dentro, la biblioteca tenía muchos libros, documentos históricos y periódicos importantes para El Salvador. Era un lugar donde la gente podía estudiar, investigar y aprender sobre la historia y la cultura del país. Con el tiempo, el edificio ha sido renovado varias veces para mejorar sus instalaciones y hacerlo más útil para todos, sin embargo su nueva edifcacion que dio inicio el pasado 3 de febrero del año 2022 con un diseño totalmente diferente a la anterior construccion entre 1953 y 1957, por motivos de que las instalaciones se encontraban en un estado deplorable debido al paso de de los años, todo el proceso de el nuevo diseño de la biblioteca fue inspirado en cosas muy tipicas de el pais, por ejemplo en las olas del mar y en las montañas” de el país.
+            </p>
+
+            <div class="image-container">
+                <img src="imagenes1/Biblioteca_Nacional_Francisco_Gavidia (5).jpg" alt="Historia de la Catedral" style="width: 500px; height: 600px; border-radius: 8px;">
+            </div>
+            <center><p>De JuliamVentura1999-Trabajo Propio</p></center>
+        </section>
+        <section id="ubicacion" class="section">
+            <h2>Ubicación</h2>
+            <!-- Código de Google Maps -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d969.0887947436548!2d-89.19142484445386!3d13.696925451943313!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f6331c27032cde1%3A0x4f51734e0a454227!2sBiblioteca%20Nacional%20de%20El%20Salvador%20(BINAES).!5e0!3m2!1ses!2ssv!4v1720326369525!5m2!1ses!2ssv" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </section>
+    </main>
+
+    <footer>
+        <!-- Contenido del pie de página -->
+        <p>© STH derechos reservados 2024</p>
+    </footer>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centro Histórico de San Salvador</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .navbar {
+            background-color: #333;
+        }
+        .navbar a {
+            color: white;
+        }
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        .navbar .navbar-nav {
+            margin-left: auto;
+        }
+        .navbar .navbar-nav .nav-item {
+            margin-left: 1rem;
+        }
+        .site-views {
+            color: white;
+            font-size: 0.8rem;
+            margin-right: 1rem;
+            align-self: center;
+            display: flex;
+            align-items: center;
+        }
+        .site-views i {
+            margin-right: 5px;
+        }
+        .carousel-item {
+            height: 70vh;
+            background-color: #333;
+            color: white;
+            position: relative;
+            background-size: cover;
+            background-position: center;
+        }
+        .carousel-caption {
+            bottom: 50%;
+            transform: translateY(50%);
+            z-index: 2;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+        .section {
+            padding: 4rem 0;
+            text-align: center;
+            color: white;
+        }
+        .section h2 {
+            margin-bottom: 2rem;
+            color: #000000;
+        }
+        .section .col-md-4 {
+            margin-bottom: 2rem;
+        }
+        .place-card {
+            background-color: rgba(255, 255, 255, 0.74);
+            padding: 20px;
+            border-radius: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .place-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .place-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .place-card h3 {
+            color: #333;
+            font-family: 'Georgia', serif;
+        }
+        .place-card p {
+            margin-top: 1rem;
+            color: #666;
+        }
+        .enter-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #79c4d1;
+            color: #080707;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+        .enter-button:hover {
+            background-color: #cc0000;
+        }
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">Centro Histórico</a>
+        <div class="site-views ml-auto">
+            <i class="fas fa-eye"></i> <span id="views-count">100</span>
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#lugares">Lugares</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#eventos">Eventos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Galería</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contacto</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active" style="background-image: url('/imagenes1/catedral\ camara.JPG');">
+                <div class="overlay"></div>
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Centro Histórico</h5>
+                    <p>Descubre la riqueza cultural de San Salvador</p>
+                </div>
+            </div>
+            <div class="carousel-item" style="background-image: url('imagenes1/teatro\ nacional.JPG');">
+                <div class="overlay"></div>
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Lugares Emblemáticos</h5>
+                    <p>Conoce los lugares más icónicos del centro</p>
+                </div>
+            </div>
+            <div class="carousel-item" style="background-image: url('imagenes1/IGLESIA\ EL\ CALVARIO\ FONDO\ \(1\).jpg');">
+                <div class="overlay"></div>
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Historia y Cultura</h5>
+                    <p>Explora la historia detrás de cada rincón</p>
+                </div>
+            </div>
+            <div class="carousel-item" style="background-image: url('imagenes1/PLAZA\ MORAZAN\ FONDO\ EDIT.jpg');">
+                <div class="overlay"></div>
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Lugares Emblemáticos</h5>
+                    <p>Conoce los lugares más icónicos del centro</p>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Anterior</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Siguiente</span>
+        </a>
+    </div>
+
+    <section class="section" id="lugares" style="background-color: #f8f9fa; padding: 4rem 0;">
+        <div class="container">
+            <h2 class="text-center mt-5 mb-4">Lugares Emblemáticos</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="place-card">
+                        <h3>Palacio Nacional</h3>
+                        <img src="imagenes1/Palacio nacional foto.jpg" alt="Palacio Nacional" class="img-fluid" style="width: 300px; height: 300px; border-radius: 8px;">
+                        <a href="index3.html" class="enter-button">ENTRAR</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="place-card">
+                        <h3>Catedral Metropolitana</h3>
+                        <img src="imagenes1/catedral de san salvador.JPG" alt="Catedral Metropolitana" style="width: 300px; height: 300px; border-radius: 8px;">
+                        <a href="index2.html" class="enter-button">ENTRAR</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="place-card">
+                        <h3>Teatro Nacional</h3>
+                        <img src="imagenes1/teatro nacional.JPG" alt="Teatro Nacional" class="img-fluid" style="width: 300px; height: 300px; border-radius: 8px;">
+                        <a href="index7.html" class="enter-button">ENTRAR</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="place-card">
+                        <h3>Cripta Monseñor.R</h3>
+                        <img src="imagenes1/cripta monse.JPG" alt="Cripta Monseñor Romero" style="width: 300px; height: 300px; border-radius: 8px;">
+                        <a href="index5.html" class="enter-button">ENTRAR</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="place-card">
+                        <h3>Kilómetro 0</h3>
+                        <img src="imagenes1/kilomrtro 0.JPG" alt="Kilómetro 0" class="img-fluid" style="width: 300px; height: 300px; border-radius: 8px;">
+                        <a href="index6.html" class="enter-button">ENTRAR</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="place-card">
+                        <h3>Plaza Gerardo Barrios</h3>
+                        <img src="imagenes1/IMG_2394.JPG" alt="Plaza Gerardo Barrios" class="img-fluid" style="width: 300px; height: 300px; border-radius: 8px;">
+                        <a href="index9.html" class="enter-button">ENTRAR</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="place-card">
+                        <h3>Plaza Libertad</h3>
+                        <img src="imagenes1/PLAZA LIBERTAD 1.jpg" alt="Plaza Libertad" style="width: 300px; height: 300px; border-radius: 8px;">
+                        <a href="index10.html" class="enter-button">ENTRAR</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="place-card">
+                        <h3>Iglesia El Rosario</h3>
+                        <img src="imagenes1/el rosario.JPG" alt="Iglesia El Rosario" class="img-fluid" style="width: 300px; height: 300px; border-radius: 8px;">
+                        <a href="index12.html" class="enter-button">ENTRAR</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="place-card">
+                        <h3>Iglesia El Calvario</h3>
+                        <img src="imagenes1/CALVARIO EDIT3.jpg" alt="Iglesia El Calvario" class="img-fluid" style="width: 300px; height: 300px; border-radius: 8px;">
+                        <a href="index8.html" class="enter-button">ENTRAR</a>
+                    </div>
+                </div>
+                <!-- Nuevos cuadros -->
+                <div class="col-md-4">
+                    <div class="place-card">
+                        <h3>Plaza Morazan</h3>
+                        <img src="imagenes1/IMG_2451.JPG" alt="Nuevo Lugar" class="img-fluid" style="width: 300px; height: 300px; border-radius: 8px;">
+                        <a href="index11.html" class="enter-button">ENTRAR</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="place-card">
+                        <h3>Biblioteca Nacional</h3>
+                        <img src="imagenes1/Biblioteca_Nacional_Francisco_Gavidia (5).jpg" alt="Nuevo Lugar" class="img-fluid" style="width: 300px; height: 300px; border-radius: 8px;">
+                        <a href="index4.html" class="enter-button">ENTRAR</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; STH Todos los derechos reservados.</p>
+            <p>contacto: sth2024.01@gmail.com</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // Simulación de contador de vistas (solo para propósitos demostrativos)
+        let viewsCount = 100; // Aquí deberías usar un contador real desde tu backend
+
+        function updateViewsCount() {
+            // Simular una actualización periódica del contador (cada 10 segundos)
+            setInterval(() => {
+                viewsCount += Math.floor(Math.random() * 10); // Añade un número aleatorio
+                document.getElementById('views-count').textContent = viewsCount;
+            }, 10000); // 10000 milisegundos = 10 segundos
+        }
+
+        // Llamar a la función para iniciar el contador
+        updateViewsCount();
+    </script>
+</body>
+</html>
